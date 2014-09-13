@@ -48,7 +48,9 @@ Dead-simple node.js app, running in a Docker container on top of an Ubuntu Trust
 
 WATCH OUT! The article seems to have a bug in that it accidentially overwrites the `/etc/default/docker` file. I think it should append, instead:
 
-      $ sh -c "echo 'DOCKER_OPTS=\"-r=false\"' >> /etc/default/docker"
+        $ sh -c "echo 'DOCKER_OPTS=\"-r=false\"' >> /etc/default/docker"
+
+  There is [pull request 8023](https://github.com/docker/docker/pull/8023) to fix this.
 
 * Start the container using upstart
 
