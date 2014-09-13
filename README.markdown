@@ -9,3 +9,7 @@
 1. Push the container (I did it as a public container):
 
       $ docker push nerab/centos-node-hello
+
+1. Start the container in the background
+
+      $ docker run -p 49160:8080 -d nerab/centos-node-hello
