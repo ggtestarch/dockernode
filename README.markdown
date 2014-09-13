@@ -4,12 +4,12 @@
 
 1. Build the docker container
 
-      $ sudo docker build -t nerab/centos-node-hello .
+      $ sudo docker build -t nerab/hello-node .
 
 1. Push the container (I did it as a public container):
 
-      $ docker push nerab/centos-node-hello
+      $ docker push nerab/hello-node
 
 1. Start the container in the background
 
-      $ docker run -p 49160:8080 -d nerab/centos-node-hello
+      $ docker run -p 49160:8080 -d nerab/hello-node
