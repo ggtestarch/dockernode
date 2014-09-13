@@ -24,7 +24,7 @@ Dead-simple node.js app, running in a Docker container on top of an Ubuntu Trust
 
         $ curl http://192.168.59.103:49160
 
-  The IP address is the one of the $DOCKER_HOST, but using the port we mapped via the -p parameter above.
+  The IP address is the one of the `$DOCKER_HOST`, but using the port we mapped via the `-p` parameter above.
 
 1. Stop the container and start it again in the background, which is what we will do in reality:
 
@@ -42,11 +42,11 @@ Dead-simple node.js app, running in a Docker container on top of an Ubuntu Trust
 
         $ docker run -p 49160:8080 --name hello-node nerab/hello-node
 
-  Running with --name hello-node gives this image a local name, which we will refer to later on in the upstart job.
+  Running with `--name hello-node` gives this image a local name, which we will refer to later on in the upstart job.
 
 * Install the upstart job to run the container permanently by following https://docs.docker.com/articles/host_integration/
 
-WATCH OUT! The article seems to have a bug in that it accidentially overwrites the `/etc/default/docker` file. I think it should append, instead:
+  WATCH OUT! The article seems to have a bug in that it accidentially overwrites the `/etc/default/docker` file. I think it should append, instead:
 
         $ sh -c "echo 'DOCKER_OPTS=\"-r=false\"' >> /etc/default/docker"
 
