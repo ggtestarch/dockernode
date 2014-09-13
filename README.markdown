@@ -8,31 +8,31 @@ Dead-simple node.js app, running in a Docker container on top of an Ubuntu Trust
 
 * In order to simplify running the commands, permanently export the URL of the remote (VM) docker host:
 
-      export DOCKER_HOST=tcp://192.168.59.103:2375
+        $ export DOCKER_HOST=tcp://192.168.59.103:2375
 
 # Building and testing the image
 
 1. Build the docker image
 
-      $ sudo docker build -t nerab/hello-node .
+        $ sudo docker build -t nerab/hello-node .
 
 1. Start the image in the foreground
 
-      $ docker run -p 49160:8080 nerab/hello-node
+        $ docker run -p 49160:8080 nerab/hello-node
 
 1. Access the node app running in the container
 
-      $ curl http://192.168.59.103:49160
+        $ curl http://192.168.59.103:49160
 
   The IP address is the one of the $DOCKER_HOST, but using the port we mapped via the -p parameter above.
 
 1. Stop the container and start it again in the background, which is what we will do in reality:
 
-      $ docker run -p 49160:8080 -d nerab/hello-node
+        $ docker run -p 49160:8080 -d nerab/hello-node
 
 1. Push the container (I did it as a public container):
 
-      $ docker push nerab/hello-node
+        $ docker push nerab/hello-node
 
 # Running the container in production
 
@@ -40,7 +40,7 @@ Dead-simple node.js app, running in a Docker container on top of an Ubuntu Trust
 
 * Try to run the image manually:
 
-      $ docker run -p 49160:8080 --name hello-node nerab/hello-node
+        $ docker run -p 49160:8080 --name hello-node nerab/hello-node
 
   Running with --name hello-node gives this image a local name, which we will refer to later on in the upstart job.
 
@@ -52,8 +52,8 @@ WATCH OUT! The article seems to have a bug in that it accidentially overwrites t
 
 * Start the container using upstart
 
-      $ initctl start
+        $ initctl start
 
 * Check the log file
 
-      $ tail -f /var/log/upstart/hello-node.log
+        $ tail -f /var/log/upstart/hello-node.log
