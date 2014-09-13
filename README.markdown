@@ -1,12 +1,16 @@
+# hello-docker-node
+
+Dead-simple node.js app, running in a Docker container on top of an Ubuntu Trusty Thar image. This project is based on [docker-node-hello](https://github.com/enokd/docker-node-hello/).
+
 # Prerequisites
 
-* Get the source onto a machine that has docker installed, e.g. one of the CoreOS nodes. A Vagrant-shared folder worked fine for me, too.
+* Get the source into some place where docker is installed, e.g. a CoreOS node (a Vagrant-shared folder worked fine for me). Alternatively, use [boot2docker](https://github.com/steeve/boot2docker) (especially on a Mac).
 
-* Alternatively, use boot2docker (especially on a Mac). In order to simplify running the commands, permanently export the URL of the remote (VM) docker host:
+* In order to simplify running the commands, permanently export the URL of the remote (VM) docker host:
 
       export DOCKER_HOST=tcp://192.168.59.103:2375
 
-# Building the initial image
+# Building and testing the image
 
 1. Build the docker image
 
