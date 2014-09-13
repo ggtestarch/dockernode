@@ -5,6 +5,7 @@
   "description": "Node.js Hello world app using docker",
   "author": "Daniel Gasienica <daniel@gasienica.ch>",
   "dependencies": {
-    "express": "~3.2.4"
+    "express": "~3.2.4",
+    "morgan": "^1.3.0"
   }
 }
