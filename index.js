@@ -7,7 +7,7 @@ var app = express();
 app.use(morgan('combined'))
 
 app.get('/', function (req, res) {
-  res.send('Hello from ' + os.hostname() + ' at ' + new Date() + '\n');
+  res.send('<bold>Hello from ' + os.hostname() + ' at ' + new Date() + '\n</bold>');
 });
 
 app.listen(PORT);
