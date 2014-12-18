@@ -1,6 +1,7 @@
-# hello-docker-node
+# dockernode
 
-Dead-simple node.js app, running in a Docker container on top of an Ubuntu Trusty Thar image. This project is based on [docker-node-hello](https://github.com/enokd/docker-node-hello/).
+Simple node.js app, running in a Docker container on top of an Ubuntu Trusty Thar image. 
+This project is based on [docker-node-hello](https://github.com/enokd/docker-node-hello/).
 
 # Prerequisites
 
